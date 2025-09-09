@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tgui_sfml_graphics_vendor</name>
+  <version>0.2.0</version>
+  <description>The tgui_sfml_graphics_vendor package</description>
+  <maintainer email="josh@electrifiedautnomy.com">Josh Whitley</maintainer>
+  <license>MIT</license>
+  <author email="josh@electrifiedautonomy.com">Josh Whitley</author>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+  <buildtool_depend>ament_cmake_vendor_package</buildtool_depend>
+
+  <depend>sfml-dev</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
