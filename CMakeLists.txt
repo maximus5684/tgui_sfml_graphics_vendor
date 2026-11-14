@@ -4,7 +4,11 @@ project(tgui_sfml_graphics_vendor)
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
-find_package(SFML COMPONENTS graphics REQUIRED)
+# SFML 3 uses capitalized component names; SFML 2 uses lowercase.
+find_package(SFML 3 CONFIG QUIET COMPONENTS Graphics)
+if(NOT SFML_FOUND)
+  find_package(SFML 2.5 CONFIG REQUIRED COMPONENTS graphics)
+endif()
 
 ament_vendor(${PROJECT_NAME}
   SATISFIED FALSE
